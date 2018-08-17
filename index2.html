@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/favicon.ico">
+    <title>Quiet Life</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="lib/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="http://p192rb6nz.bkt.clouddn.com/bootstrap.min.css"> -->
+    <!-- Custom styles for this template -->
+    <link href="css/index.css" rel="stylesheet">
+</head>
+
+<body ng-controller="QuietCtrl">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right" style="margin-right: 260px; width:auto;">
+                    <!-- <li><a ng-click="login();">登录</a></li> -->
+                    <!-- <li><a ng-click="register();">注册</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" style="height: 100px;background-color: red;">
+        
+    </div>
+    <div class="container-fluid jumbotron">
+        <div class="container">
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <!-- <div class="panel-body"> -->
+                    <textarea class="quiet-textarea form-control" style="border-top: none; border-right: none; border-left: none;" placeholder="说点儿什么吧" ng-model="text" rows="3"></textarea>
+                    <!-- </div> -->
+                    <div class="panel-footer msg" style="display: none;background-color: #FEF9E0">随便说两句吧.....</div>
+                    <div class="text-right quiet-text" style="display: none;margin:2px;">
+                        <button type="submit" class="btn btn-info" ng-click="cancel(text)">取消</button>
+                        <button type="submit" class="btn btn-info" ng-click="release(text)">发布</button>
+                    </div>
+                </div>
+                <div class="list-text">
+                    <div class='panel panel-default ng-scope' ng-repeat="text in textList">
+                        <div class="panel-body" style="padding-bottom:0px;"><img src="img/head1.png" style="width: 50px;height: 50px;" alt="..." class="img-circle"> {{text.created}}
+                            <div class="btn-group" style="float: right;">
+                                <!-- <button type="button" class="btn btn-default">Action</button> -->
+                                <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="glyphicon glyphicon-chevron-up"></span>
+                                <!-- <span class="sr-only">Toggle Dropdown</span> -->
+                                </span>
+                                <ul class="dropdown-menu" style="position:absolute;left:-60px;top:15px;min-width: 60px;font-size: 10px;">
+                                    <li><a href="#" ng-click="delete()">删除</a></li>
+                                    <li><a href="#" ng-click="report()">举报</a></li>
+                                    <!-- <li role="separator" class="divider"></li> -->
+                                    <!-- <li><a href="#">Separated link</a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class='panel-body'>
+                            <pre style='border: none; background-color: transparent;'>{{text.article}}</pre>
+                            <hr style='margin-bottom: 0px; margin-top: 0px'>
+                            <div class='review' oncontextmenu="return false;" onselectstart="return false">
+                                <ul>
+                                    <li class='glyphicon glyphicon-thumbs-up' ng-click="praise(text)">{{text.praise > 0 ? text.praise : '赞'}}</li>
+                                    <!-- <li class='glyphicon glyphicon-thumbs-down' ng-click="tread(text)">{{text.tread > 0 ? text.tread : '踩'}}</li> -->
+                                    <li class='glyphicon glyphicon-edit' ng-click="comment(text)">{{text.comment > 0 ? text.comment : '评论'}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comment-text">
+                            <div id="{{text.articleId}}" class='panel-body' style="display: none;padding-top: 0px; padding-bottom: 0px;">
+                                <textarea class="form-control" style="border-top: none; border-right: none; border-left: none;" placeholder="评点儿什么吧" ng-model="text.commentText" rows="3"></textarea>
+                                <button type="submit" style="float: right;margin: 2px;" class="btn btn-warning" ng-click="addAomment(text)">评论</button>
+                            </div>
+                            <div class='panel-body' style='margin-left:9.5px;padding-top:0px;' ng-repeat="comment in text.comments">
+                                <img src='img/head1.png' style='width: 30px;height: 30px; margin-right:5px;' ' alt='... '' class='img-circle'>{{comment.created}}
+                                <div class='panel-body' style='margin-left:30px; padding:5px;'>
+                                    {{comment.comment}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="col-sm-offset-3 col-sm-6 text-right">
+                        <nav aria-label="...">
+                            <ul class="pager">
+                                <li class="previous"><a href="#" ng-click="search(start-limit-1 < 0 ? 0:start-limit-1,limit)"><span aria-hidden="true">&larr;</span> Older</a></li>
+                                <li class="next"><a href="#" ng-click="search(start+limit+1,limit)">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        今
+                    </div>
+                    <div class="panel-body">
+                        天
+                    </div>
+                    <div class="panel-body">
+                        风
+                    </div>
+                    <div class="panel-body">
+                        儿
+                    </div>
+                    <div class="panel-body">
+                        甚
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        是
+                    </div>
+                    <div class="panel-body">
+                        喧
+                    </div>
+                    <div class="panel-body">
+                        嚣
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script type="text/javascript" src="http://p192rb6nz.bkt.clouddn.com/angular.min.js"></script> -->
+    <script type="text/javascript" src="lib/angularjs/1.7.0/angular.min.js"></script>
+    <!-- <script type="text/javascript" src="http://p192rb6nz.bkt.clouddn.com/angular-ui-router.js"></script> -->
+    <script type="text/javascript" src="lib/angular-ui-router/angular-ui-router.js"></script>
+    <!-- <script type="text/javascript" src="http://p192rb6nz.bkt.clouddn.com/angular-animate.min.js"></script> -->
+    <script type="text/javascript" src="lib/angularjs/1.7.0/angular-animate.min.js"></script>
+    <!-- <script type="text/javascript" src="http://p192rb6nz.bkt.clouddn.com/ui-bootstrap-tpls-2.5.0.min.js"></script> -->
+    <script type="text/javascript" src="lib/angular-bootstrap/2.5.0/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <!-- <script type="text/javascript" src="http://p192rb6nz.bkt.clouddn.com/jquery.min.js"></script> -->
+    <script type="text/javascript" src="lib/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    window.jQuery
+    </script>
+    <script>
+    $(function() {
+        $("[data-toggle='popover']").popover();
+    });
+    </script>
+    <!-- <script type="text/javascript" src="http://p192rb6nz.bkt.clouddn.com/bootstrap.min.js"></script> -->
+    <script type="text/javascript" src="lib/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/quiet.js"></script>
+    <script type="text/javascript" src="js/commonquiet.js"></script>
+    <script>
+    angular.bootstrap(document, ['app']);
+    </script>
+</body>
+
+</html>
