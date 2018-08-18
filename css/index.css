@@ -75,9 +75,19 @@ div.review ul li {
 
 div.posts-editor:focus {
     outline: none;
-    border-color: #027fff;
-    /*box-shadow: 0 0 10px #027fff;*/
+	box-shadow: 0 0 0 1px #027fff;
 }
 div.posts-editor:hover{
-	border: 1px solid red;
+	
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+    background-color: white;
+    color: #027fff;
+    border-radius: 0px;
+    border-bottom: 1px solid #027fff;
+}
+
+.nav>li>a:focus, .nav>li>a:hover{
+    background-color:transparent;
 }

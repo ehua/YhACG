@@ -47,12 +47,12 @@
                     <div class="release">
                         <div class="panel panel-default" style="border: 0px;">
                             <div class="panel-body">
-                                <div class="posts-editor" contenteditable="true" style="padding: 5px; border:1px solid #ccc;border-radius: 5px; font-size: 16px;font-family: Moncaco; min-height: 80px;">
+                                <div class="posts-editor" contenteditable="true" style="padding: 5px; overflow:scroll;border:1px solid #ccc; border-radius: 2px; font-size: 16px;font-family: Moncaco; height: 80px;">
                                     
                                 </div>
                             </div>
                             <div class="panel-body" style="padding-top: 0px;">
-                                <div class="left-comment" style="width: 69%;float: left;color: #027fff">
+                                <div class="left-comment" style="width: 66%;float: left;color: #027fff">
                                     <ul>
                                         <li style="margin-left: 0px;"><a href=""><i class="iconfont">&#xe61e;</i>表情</a></li>
                                         <li><a href=""><i class="iconfont">&#xe631;</i>图片</a></li>
@@ -60,308 +60,408 @@
                                         <li><a href=""><i class="iconfont">#</i>话题</a></li>
                                     </ul>
                                 </div>
-                                <div class="right-comment" style="width: 31%;float: left;">
+                                <div class="right-comment" style="width: 34%;float: left;">
                                     <ul>
                                         <li>
                                             Ctrl or ⌘ + Enter
                                         </li>
                                         <li>
-                                            <button type="submit" class="btn btn-default" disabled="disabled" style="border:0px;color: white;background-color: #027fff" ng-click="release(text)">发布</button>
+                                            <button type="submit" class="btn btn-default" disabled="disabled" style="width:74px;border:0px;color: white;background-color: #027fff" ng-click="release(text)">发布</button>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-default" style="margin-bottom: 5px;border: 0px;">
-                        <ul class="nav nav-pills" style="padding-left: 40%;padding-right: 40%;">
-                          <li role="presentation" style="border-bottom: 2px solid #027fff;"><a href="#">推荐</a></li>
-                          <li role="presentation"><a href="#">我的</a></li>
-                        </ul>
-                    </div>
-                    <div class="panel panel-default" style="margin-bottom: 7px;border: 0px;">
-                        <div class="panel-body">
-                            <div class="postsLeft" style="width: 10%;float: left;">
-                                <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
-                            </div>
-                            <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
-                                <span style="color:#027fff;display: block;">椎名真白</span>
-                                <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
-                            </div>
-                            <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
-                                <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
-                            </div>
-                        </div>
-                        <div class="panel-body" style="margin-left: 10%;">
-                            <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
+                    <div class="panel" style="border: 0px;">
+                          <uib-tabset type="pills">
+                            <uib-tab heading="推荐" classes="btn-sm">
+                                <div class="panel panel-default" style="margin-bottom: 7px;border: 0px; border-radius: 0px;">
+                                    <div class="panel-body">
+                                        <div class="postsLeft" style="width: 10%;float: left;">
+                                            <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
+                                        </div>
+                                        <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
+                                            <span style="color:#027fff;display: block;">椎名真白</span>
+                                            <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
+                                        </div>
+                                        <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
+                                            <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body" style="margin-left: 10%;">
+                                        <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
 
 已而遂晴，故作此词。 莫听穿林打叶声，何妨吟啸且徐行。
 
 竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。 
 
 料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。
-                            </div>
-                            <div class="review text-right">
-                                <ul>
-                                    <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default" style="margin-bottom: 7px;border: 0px;">
-                        <div class="panel-body">
-                            <div class="postsLeft" style="width: 10%;float: left;">
-                                <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
-                            </div>
-                            <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
-                                <span style="color:#027fff;display: block;">椎名真白</span>
-                                <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
-                            </div>
-                            <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
-                                <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
-                            </div>
-                        </div>
-                        <div class="panel-body" style="margin-left: 10%;">
-                            <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
+                                        </div>
+                                        <div class="review text-right">
+                                            <ul>
+                                                <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" style="margin-bottom: 7px;border: 0px; border-radius: 0px;">
+                                    <div class="panel-body">
+                                        <div class="postsLeft" style="width: 10%;float: left;">
+                                            <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
+                                        </div>
+                                        <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
+                                            <span style="color:#027fff;display: block;">椎名真白</span>
+                                            <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
+                                        </div>
+                                        <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
+                                            <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body" style="margin-left: 10%;">
+                                        <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
 
 已而遂晴，故作此词。 莫听穿林打叶声，何妨吟啸且徐行。
 
 竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。 
 
 料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。
-                            </div>
-                            <div class="review text-right">
-                                <ul>
-                                    <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default" style="margin-bottom: 10px;border: 0px;">
-                        <div class="panel-body">
-                            <div class="postsLeft" style="width: 10%;float: left;">
-                                <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
-                            </div>
-                            <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
-                                <span style="color:#027fff;display: block;">椎名真白</span>
-                                <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
-                            </div>
-                            <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
-                                <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
-                            </div>
-                        </div>
-                        <div class="panel-body" style="margin-left: 10%;">
-                            <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
+                                        </div>
+                                        <div class="review text-right">
+                                            <ul>
+                                                <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" style="margin-bottom: 7px;border: 0px; border-radius: 0px;">
+                                    <div class="panel-body">
+                                        <div class="postsLeft" style="width: 10%;float: left;">
+                                            <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
+                                        </div>
+                                        <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
+                                            <span style="color:#027fff;display: block;">椎名真白</span>
+                                            <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
+                                        </div>
+                                        <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
+                                            <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body" style="margin-left: 10%;">
+                                        <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
 
 已而遂晴，故作此词。 莫听穿林打叶声，何妨吟啸且徐行。
 
 竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。 
 
 料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。
-                            </div>
-                            <div class="review text-right">
-                                <ul>
-                                    <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default" style="margin-bottom: 10px;border: 0px;">
-                        <div class="panel-body">
-                            <div class="postsLeft" style="width: 10%;float: left;">
-                                <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
-                            </div>
-                            <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
-                                <span style="color:#027fff;display: block;">椎名真白</span>
-                                <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
-                            </div>
-                            <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
-                                <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
-                            </div>
-                        </div>
-                        <div class="panel-body" style="margin-left: 10%;">
-                            <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
+                                        </div>
+                                        <div class="review text-right">
+                                            <ul>
+                                                <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" style="margin-bottom: 7px;border: 0px; border-radius: 0px;">
+                                    <div class="panel-body">
+                                        <div class="postsLeft" style="width: 10%;float: left;">
+                                            <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
+                                        </div>
+                                        <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
+                                            <span style="color:#027fff;display: block;">椎名真白</span>
+                                            <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
+                                        </div>
+                                        <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
+                                            <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body" style="margin-left: 10%;">
+                                        <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
 
 已而遂晴，故作此词。 莫听穿林打叶声，何妨吟啸且徐行。
 
 竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。 
 
 料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。
-                            </div>
-                            <div class="review text-right">
-                                <ul>
-                                    <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default" style="margin-bottom: 10px;border: 0px;">
-                        <div class="panel-body">
-                            <div class="postsLeft" style="width: 10%;float: left;">
-                                <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
-                            </div>
-                            <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
-                                <span style="color:#027fff;display: block;">椎名真白</span>
-                                <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
-                            </div>
-                            <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
-                                <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
-                            </div>
-                        </div>
-                        <div class="panel-body" style="margin-left: 10%;">
-                            <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
+                                        </div>
+                                        <div class="review text-right">
+                                            <ul>
+                                                <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" style="margin-bottom: 7px;border: 0px; border-radius: 0px;">
+                                    <div class="panel-body">
+                                        <div class="postsLeft" style="width: 10%;float: left;">
+                                            <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
+                                        </div>
+                                        <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
+                                            <span style="color:#027fff;display: block;">椎名真白</span>
+                                            <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
+                                        </div>
+                                        <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
+                                            <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body" style="margin-left: 10%;">
+                                        <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
 
 已而遂晴，故作此词。 莫听穿林打叶声，何妨吟啸且徐行。
 
 竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。 
 
 料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。
-                            </div>
-                            <div class="review text-right">
-                                <ul>
-                                    <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default" style="margin-bottom: 10px;border: 0px;">
-                        <div class="panel-body">
-                            <div class="postsLeft" style="width: 10%;float: left;">
-                                <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
-                            </div>
-                            <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
-                                <span style="color:#027fff;display: block;">椎名真白</span>
-                                <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
-                            </div>
-                            <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
-                                <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
-                            </div>
-                        </div>
-                        <div class="panel-body" style="margin-left: 10%;">
-                            <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
+                                        </div>
+                                        <div class="review text-right">
+                                            <ul>
+                                                <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" style="margin-bottom: 7px;border: 0px; border-radius: 0px;">
+                                    <div class="panel-body">
+                                        <div class="postsLeft" style="width: 10%;float: left;">
+                                            <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
+                                        </div>
+                                        <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
+                                            <span style="color:#027fff;display: block;">椎名真白</span>
+                                            <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
+                                        </div>
+                                        <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
+                                            <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body" style="margin-left: 10%;">
+                                        <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
 
 已而遂晴，故作此词。 莫听穿林打叶声，何妨吟啸且徐行。
 
 竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。 
 
 料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。
-                            </div>
-                            <div class="review text-right">
-                                <ul>
-                                    <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default" style="margin-bottom: 10px;border: 0px;">
-                        <div class="panel-body">
-                            <div class="postsLeft" style="width: 10%;float: left;">
-                                <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
-                            </div>
-                            <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
-                                <span style="color:#027fff;display: block;">椎名真白</span>
-                                <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
-                            </div>
-                            <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
-                                <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
-                            </div>
-                        </div>
-                        <div class="panel-body" style="margin-left: 10%;">
-                            <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
+                                        </div>
+                                        <div class="review text-right">
+                                            <ul>
+                                                <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" style="margin-bottom: 7px;border: 0px; border-radius: 0px;">
+                                    <div class="panel-body">
+                                        <div class="postsLeft" style="width: 10%;float: left;">
+                                            <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
+                                        </div>
+                                        <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
+                                            <span style="color:#027fff;display: block;">椎名真白</span>
+                                            <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
+                                        </div>
+                                        <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
+                                            <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body" style="margin-left: 10%;">
+                                        <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
 
 已而遂晴，故作此词。 莫听穿林打叶声，何妨吟啸且徐行。
 
 竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。 
 
 料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。
-                            </div>
-                            <div class="review text-right">
-                                <ul>
-                                    <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default" style="margin-bottom: 10px;border: 0px;">
-                        <div class="panel-body">
-                            <div class="postsLeft" style="width: 10%;float: left;">
-                                <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
-                            </div>
-                            <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
-                                <span style="color:#027fff;display: block;">椎名真白</span>
-                                <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
-                            </div>
-                            <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
-                                <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
-                            </div>
-                        </div>
-                        <div class="panel-body" style="margin-left: 10%;">
-                            <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
+                                        </div>
+                                        <div class="review text-right">
+                                            <ul>
+                                                <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" style="margin-bottom: 7px;border: 0px; border-radius: 0px;">
+                                    <div class="panel-body">
+                                        <div class="postsLeft" style="width: 10%;float: left;">
+                                            <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
+                                        </div>
+                                        <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
+                                            <span style="color:#027fff;display: block;">椎名真白</span>
+                                            <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
+                                        </div>
+                                        <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
+                                            <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body" style="margin-left: 10%;">
+                                        <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
 
 已而遂晴，故作此词。 莫听穿林打叶声，何妨吟啸且徐行。
 
 竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。 
 
 料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。
-                            </div>
-                            <div class="review text-right">
-                                <ul>
-                                    <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default" style="margin-bottom: 10px;border: 0px;">
-                        <div class="panel-body">
-                            <div class="postsLeft" style="width: 10%;float: left;">
-                                <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
-                            </div>
-                            <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
-                                <span style="color:#027fff;display: block;">椎名真白</span>
-                                <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
-                            </div>
-                            <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
-                                <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
-                            </div>
-                        </div>
-                        <div class="panel-body" style="margin-left: 10%;">
-                            <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
+                                        </div>
+                                        <div class="review text-right">
+                                            <ul>
+                                                <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" style="margin-bottom: 7px;border: 0px; border-radius: 0px;">
+                                    <div class="panel-body">
+                                        <div class="postsLeft" style="width: 10%;float: left;">
+                                            <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
+                                        </div>
+                                        <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
+                                            <span style="color:#027fff;display: block;">椎名真白</span>
+                                            <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
+                                        </div>
+                                        <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
+                                            <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body" style="margin-left: 10%;">
+                                        <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
 
 已而遂晴，故作此词。 莫听穿林打叶声，何妨吟啸且徐行。
 
 竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。 
 
 料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。
-                            </div>
-                            <div class="review text-right">
-                                <ul>
-                                    <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
-                                    <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
-                                </ul>
-                            </div>
-                        </div>
+                                        </div>
+                                        <div class="review text-right">
+                                            <ul>
+                                                <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" style="margin-bottom: 7px;border: 0px; border-radius: 0px;">
+                                    <div class="panel-body">
+                                        <div class="postsLeft" style="width: 10%;float: left;">
+                                            <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
+                                        </div>
+                                        <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
+                                            <span style="color:#027fff;display: block;">椎名真白</span>
+                                            <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
+                                        </div>
+                                        <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
+                                            <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body" style="margin-left: 10%;">
+                                        <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
+
+已而遂晴，故作此词。 莫听穿林打叶声，何妨吟啸且徐行。
+
+竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。 
+
+料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。
+                                        </div>
+                                        <div class="review text-right">
+                                            <ul>
+                                                <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" style="margin-bottom: 7px;border: 0px; border-radius: 0px;">
+                                    <div class="panel-body">
+                                        <div class="postsLeft" style="width: 10%;float: left;">
+                                            <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
+                                        </div>
+                                        <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
+                                            <span style="color:#027fff;display: block;">椎名真白</span>
+                                            <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
+                                        </div>
+                                        <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
+                                            <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body" style="margin-left: 10%;">
+                                        <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
+
+已而遂晴，故作此词。 莫听穿林打叶声，何妨吟啸且徐行。
+
+竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。 
+
+料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。
+                                        </div>
+                                        <div class="review text-right">
+                                            <ul>
+                                                <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" style="margin-bottom: 7px;border: 0px; border-radius: 0px;">
+                                    <div class="panel-body">
+                                        <div class="postsLeft" style="width: 10%;float: left;">
+                                            <img src='http://p192rb6nz.bkt.clouddn.com/index.png' style='width: 50px;height: 50px; margin-right:5px;' ' alt='... '' class='img-circle'>
+                                        </div>
+                                        <div class="postsCenter" style="width: 85%;float: left;line-height: 25px;">
+                                            <span style="color:#027fff;display: block;">椎名真白</span>
+                                            <span style="color:#b8c1cc;">2018-08-17 18:23:30</span>
+                                        </div>
+                                        <div class="postsRight" style="width: 5%;float: left; color: #b8c1cc">
+                                            <i class="iconfont" style="font-size: 26px;">&#xe637;</i>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body" style="margin-left: 10%;">
+                                        <div class="posts" style="border: 0px; background-color: white;font-size: 15px;font-family: Monaco;white-space: pre-wrap;color: #17181a;">三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。
+
+已而遂晴，故作此词。 莫听穿林打叶声，何妨吟啸且徐行。
+
+竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。 
+
+料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。
+                                        </div>
+                                        <div class="review text-right">
+                                            <ul>
+                                                <li><a href=""><i class="iconfont">&#xe627;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe662;</i></a></li>
+                                                <li><a href=""><i class="iconfont">&#xe618;</i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </uib-tab>
+                            <uib-tab heading="我的" classes="btn-sm">
+                                <div class="panel panel-default" style="margin-bottom: 7px;border: 0px; border-radius: 0px;">
+                                    <div class="panel-body text-center" style="color: #eee;">
+                                        暂无
+                                    </div>
+                                </div>
+                            </uib-tab>
+                          </uib-tabset>
                     </div>
                 </div>
                 <div class="RightBar">
                     <div class="box">
-                        <div class="panel panel-default" style="margin-bottom: 10px;border: 0px;">
+                        <div class="panel panel-default" style="border: 0px;">
                             <div class="panel-heading" style="color:white; background-color: #027fff">
                                 <strong>YhACG</strong>
                                 <br>
@@ -370,7 +470,7 @@
                             </div>
                             <div class="panel-body text-center">
                                 <button type="button" style="color: white;background-color: #027fff;border: 0px;" class="btn btn-default btn-sm">现在注册</button>
-                                <div class="spe" style="margin: 5%;"></div>
+                                <div class="spe" style="margin: 7%;"></div>
                                 <span>已注册用户请  登录</span>
                             </div>
                         </div>
