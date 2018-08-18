@@ -1,54 +1,83 @@
+a{
+    color: #027fff;
+}
+a:link {
+    color: #027fff;
+    text-decoration: none;
+}
+a:active: {
+    color: #027fff;
+}
+a:visited {
+    color: #027fff;
+    text-decoration: none;
+}
+a:hover {
+    color: #027fff;
+    text-decoration: none;
+}
 div.Main {
-	margin-left: 8%;
+    margin-left: 8%;
     width: 60%;
     /*height: 1024px;*/
     float: left;
 }
 
-div.RightBar{
-	margin-right: 8%;
-	width: 22%; 
-	margin-left: 2%; 
-	/*height: 1024px;*/
-	/*background-color: red;*/
-	float: left;
+div.RightBar {
+    margin-right: 8%;
+    width: 22%;
+    margin-left: 2%;
+    /*height: 1024px;*/
+    /*background-color: red;*/
+    float: left;
 }
 
-div.Tab ul li{
-	float: left;
-}
-
-
-div.node ul li{
-	margin: 1px;
-	list-style: none;
-	float: left;
-}
-
-div.node ul li button{
-	border-radius: 14px;
-}
-
-div.node ul{
-	padding-left: 0px;
-}
-
-div.release ul li{
-	color: #027fff;
-	line-height: 30px;
-	margin-left: 20px;
-	list-style: none;
-	float: left;
-}
-
-div.release ul{
-	padding-left: 0px;
+div.Tab ul li {
+    float: left;
 }
 
 
-div.review ul li{
-	list-style: none;
-	float: right;
-	padding-left: 10px;
+div.node ul li {
+    margin: 1px;
+    list-style: none;
+    float: left;
+
 }
 
+div.node ul li button {
+    border-radius: 14px;
+    border-color: #027fff;
+    color: black;
+}
+
+div.node ul {
+    padding-left: 0px;
+}
+
+div.release ul li {
+    color: #027fff;
+    line-height: 30px;
+    margin-left: 20px;
+    list-style: none;
+    float: left;
+}
+
+div.release ul {
+    padding-left: 0px;
+}
+
+
+div.review ul li {
+    list-style: none;
+    float: right;
+    padding-left: 10px;
+}
+
+div.posts-editor:focus {
+    outline: none;
+    border-color: #027fff;
+    /*box-shadow: 0 0 10px #027fff;*/
+}
+div.posts-editor:hover{
+	border: 1px solid red;
+}
