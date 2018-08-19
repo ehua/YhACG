@@ -1,21 +1,26 @@
-a{
+a {
     color: #027fff;
 }
+
 a:link {
     color: #027fff;
     text-decoration: none;
 }
+
 a:active: {
     color: #027fff;
 }
+
 a:visited {
     color: #027fff;
     text-decoration: none;
 }
+
 a:hover {
     color: #027fff;
     text-decoration: none;
 }
+
 div.Main {
     margin-left: 8%;
     width: 60%;
@@ -41,7 +46,6 @@ div.node ul li {
     margin: 1px;
     list-style: none;
     float: left;
-
 }
 
 div.node ul li button {
@@ -73,21 +77,43 @@ div.review ul li {
     padding-left: 10px;
 }
 
-div.posts-editor:focus {
-    outline: none;
-	box-shadow: 0 0 0 1px #027fff;
-}
-div.posts-editor:hover{
-	
+div.posts-editor {
+	padding: 10px;
+    /*border: 1px solid #ccc;*/
+    box-shadow: 0 0 0 1px #ccc;
+    border-radius: 2px;
+    /*overflow: scroll;*/
+    font-size: 16px;
+    font-family: Moncaco;
+    min-height: 80px;
 }
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+.posts-editor:empty:before{
+	content: attr(placeholder);
+	color:#bbb;
+}
+
+
+div.posts-editor:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 1px #027fff;
+    content:none;
+}
+
+div.posts-editor:hover {}
+
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover {
     background-color: white;
     color: #027fff;
     border-radius: 0px;
     border-bottom: 1px solid #027fff;
 }
 
-.nav>li>a:focus, .nav>li>a:hover{
-    background-color:transparent;
+.nav>li>a:focus,
+.nav>li>a:hover {
+    background-color: transparent;
 }
