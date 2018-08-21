@@ -2,7 +2,10 @@ var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'ngAnimate']);
 // app.config(['$qProvider', function ($qProvider) {
 //     $qProvider.errorOnUnhandledRejections(false);
 // }]);
-app.controller('QuietCtrl', function($scope, $http, $uibModal, $log) {
+app.controller('QuietCtrl1', function($scope, $http, $uibModal, $log) {
+
+
+    
 
 
     // $scope.search = function(start, limit) {

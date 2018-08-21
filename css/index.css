@@ -77,31 +77,55 @@ div.review ul li {
     padding-left: 10px;
 }
 
-div.posts-editor {
-	padding: 10px;
-    /*border: 1px solid #ccc;*/
+
+div.editor {
     box-shadow: 0 0 0 1px #ccc;
     border-radius: 2px;
-    /*overflow: scroll;*/
+}
+
+div.posts-editor:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+div.posts-editor {
+    padding: 10px;
+    /*box-shadow: 0 0 0 1px #ccc;*/
+    /*border-radius: 2px;*/
     font-size: 16px;
     font-family: Moncaco;
     min-height: 80px;
 }
 
-.posts-editor:empty:before{
-	content: attr(placeholder);
-	color:#bbb;
+div.image {
+    display: inline;
+}
+
+div.image img {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.posts-editor:empty:before {
+    content: attr(placeholder);
+    color: #bbb;
 }
 
 
-div.posts-editor:focus {
+div.editor:hover {
     border: none;
-    outline: none;
     box-shadow: 0 0 0 1px #027fff;
-    content:none;
 }
 
-div.posts-editor:hover {}
+.delete {
+    /*background-color: transparent;*/
+    color: black;
+    position: absolute;
+    padding-left: 94px;
+    padding-top: 7px;
+}
 
 
 .nav-pills>li.active>a,
