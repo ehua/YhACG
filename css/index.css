@@ -1,3 +1,15 @@
+
+div.ng-cloak{
+    display: none;
+}
+div.Top{
+    height: 50px;
+}
+
+div.content{
+    background-color: #f4f5f5;
+}
+
 a {
     color: #027fff;
 }
