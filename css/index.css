@@ -110,11 +110,10 @@ div.posts-editor {
 }
 
 div.image {
-    display: inline;
+    display: inline-block;
 }
 
 div.image img {
-    margin-top: 10px;
     margin-left: 10px;
     margin-bottom: 10px;
     border-radius: 2px;
@@ -132,13 +131,13 @@ div.editor:hover {
 }
 
 .delete {
-    /*background-color: transparent;*/
-    color: black;
-    position: absolute;
-    padding-left: 94px;
-    padding-top: 7px;
+    float: right;
+    color: #fff;
 }
 
+.delete:hover{
+    color: black;
+}
 
 .nav-pills>li.active>a,
 .nav-pills>li.active>a:focus,

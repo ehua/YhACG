@@ -53,10 +53,12 @@
                                     <div class="posts-editor" contenteditable placeholder="说点什么吧..." ng-model="quiet.posts"></div> 
                                     <div id="holder">
                                         <div ng-repeat="file in quiet.files" ng-cloak class="image ng-cloak">
-                                            <a href="javacript:void(0);" ng-click="quiet.files.splice($index,1)">
-                                                <i class="iconfont delete">&#xe633;</i>
-                                            </a>
-                                            <img ng-src="{{file.objectURL}}" width="100" height="100">
+                                            <div class="whole">
+                                                <a title="删除" href="" ng-click="quiet.files.splice($index,1)">
+                                                    <i class="iconfont delete">&#xe633;</i>
+                                                </a>
+                                            </div>
+                                            <img ng-src="{{file.objectURL}}" style="max-height:100px;max-width: 100px ">
                                         </div>
                                     </div>
                                 </div>
@@ -66,9 +68,9 @@
                                     <ul>
                                         <li style="margin-left: 0px;"><a href=""><i class="iconfont">&#xe61e;</i>表情</a></li>
                                         <p hidden="hidden"><input type="file" ng-model="quiet.wx" name="fileChooser" multiple="multiple" accept="image/*" id="fileChooser"></p>
-                                        <li><a href="javacript:void(0);" ng-click="upload()"><i class="iconfont">&#xe631;</i>图片</a></li>
-                                        <li><a href="javacript:void(0);"><i class="iconfont">&#xe603;</i>链接</a></li>
-                                        <li><a href="javacript:void(0);"><i class="iconfont">#</i>话题</a></li>
+                                        <li><a href="" ng-click="upload()"><i class="iconfont">&#xe631;</i>图片</a></li>
+                                        <li><a href=""><i class="iconfont">&#xe603;</i>链接</a></li>
+                                        <li><a href=""><i class="iconfont">#</i>话题</a></li>
                                     </ul>
                                 </div>
                                 <div class="right-comment" style="width: 14.5%;float: left;">
@@ -559,9 +561,9 @@
                                 <span class="profile">是一个关于分享和探索的地方</span>
                             </div>
                             <div class="panel-body text-center">
-                                <button type="button" style="color: white;background-color: #027fff;border: 0px;" class="btn btn-default btn-sm">现在注册</button>
+                                <button type="button" style="color: white;background-color: #027fff;border: 0px;" ng-click="register()" class="btn btn-default btn-sm">现在注册</button>
                                 <div class="spe" style="margin: 7%;"></div>
-                                <span>已注册用户请  登录</span>
+                                <span>已注册用户请 <a href="" ng-click="login()">登录</a></span>
                             </div>
                         </div>
                     </div>
@@ -669,7 +671,7 @@
         $("[data-toggle='popover']").popover();
     });
     </script>
-    <script type="text/javascript" src="lib/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/3.3.7/js/bootstrap.js"></script>
     <script type="text/javascript" src="js/quiet.directive.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script>
