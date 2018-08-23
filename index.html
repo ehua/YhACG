@@ -79,7 +79,7 @@
                                             <!-- Ctrl or ⌘ + Enter -->
                                         </li>
                                         <li>
-                                            <button type="submit" class="btn btn-default" style="width:74px;border:0px;color: white;background-color: #027fff" ng-click="release(text)">发布</button>
+                                            <button type="submit" class="btn btn-default release-btn" style="width:74px;border:0px;color: white;background-color: #027fff" ng-click="release(text)" disabled="disabled">发布</button>
                                         </li>
                                     </ul>
                                 </div>
@@ -552,7 +552,7 @@
                     </div>
                 </div>
                 <div class="RightBar">
-                    <div class="box">
+                    <div class="box ng-cloak" ng-cloak>
                         <div class="panel panel-default" style="border: 0px;">
                             <div class="panel-heading" style="color:white; background-color: #027fff">
                                 <strong>YhACG</strong>
@@ -560,11 +560,18 @@
                                 <div class="spe" style="margin: 1%;"></div>
                                 <span class="profile">是一个关于分享和探索的地方</span>
                             </div>
-                            <div class="panel-body text-center">
+                            <div ng-show="{{!user}}" class="panel-body text-center">
                                 <button type="button" style="color: white;background-color: #027fff;border: 0px;" ng-click="register()" class="btn btn-default btn-sm">现在注册</button>
                                 <div class="spe" style="margin: 7%;"></div>
-                                <span>已注册用户请 <a href="" ng-click="login()">登录</a></span>
+                                <span>已注册用户请 <a href="" style="box-shadow: none; outline: none;" ng-click="login()">登录</a></span>
                             </div>
+                            <div ng-show="{{user}}" class="panel-body text-center">
+                                <a title="退出" href="" ng-click="logout()">
+                                    <i class="iconfont logout">&#xe633;</i>
+                                </a>
+                                <img src='img/head.png' style='width: 90px;height: 90px; margin-right:5px;' ' alt='... '' class='img-circle'>
+                            </div>
+
                         </div>
                     </div>
                     <div class="box">
@@ -671,7 +678,7 @@
         $("[data-toggle='popover']").popover();
     });
     </script>
-    <script type="text/javascript" src="lib/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/quiet.directive.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script>

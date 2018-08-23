@@ -1,4 +1,56 @@
 
+body.modal-open { 
+  padding-right: 0 !important;
+  overflow-y: scroll;
+  /*border: 0px;*/
+}
+
+.modal-xss{
+    width: 330px;
+    margin-top: 15%;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    vertical-align:middle;
+}
+.modal-content{
+    border-radius: 2px;
+}
+
+div.login-content{
+    line-height: 20px;
+}
+
+.custom-input{
+    font-size: 15px;
+    box-shadow: none;
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+.logout{
+    position: absolute;
+    color: black;
+}
+
+.custom-input::-webkit-input-placeholder {
+    color: #aab2bd;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+}
+
+.custom-input:focus{
+    border:none;
+    box-shadow: none;
+    border: 1px solid #027fff;
+}
+.custom-input:blur{
+    border:none;
+    border: 1px solid #ccc;
+}
+
 div.ng-cloak{
     display: none;
 }

@@ -1,10 +1,17 @@
-<div class="modal-header">
+<div class="modal-header" style="border-bottom: none;">
+    <label style="font-weight: normal;color: #027fff;">注册</label>
     <button type="button" class="close" ng-click="cancel()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
 </div>
-<div class="modal-body" id="modal-body">
+<div class="modal-body">
+    <div class="register-content">
+        <input id="register-email" type="text" ng-model="email" placeholder="请输入邮箱" style="text-align: center;" class="custom-input form-control">
+        <input id="register-password" type="password" ng-model="password" placeholder="请输入密码(不少于6位)" style="text-align: center;" class="custom-input form-control">
+        <input id="register-code" type="text" ng-model="checkCode" disabled="disabled" placeholder="校验码" style="width: 50%;float: left;text-align: center;" class="custom-input form-control">
+        <button type="button" class="btn btn-default send-code" ng-click="sendCode(email,this)" style="border-radius: 2px;font-size: 10px; margin-left: 15%; width: 35%; line-height: 20px;">获取校验码</button>
+    </div>
+    <div class="register-submit">
+        <button type="button" class="btn btn-default" ng-click="register()" style="border-radius: 2px; width: 100%; height: 34px; background-color: #027fff;border: none; color: white;">注册</button>
+    </div>
 </div>
-<div class="modal-footer">
-    <button class="btn btn-primary" type="button" ng-click=ok() ">OK</button>
-    <button class="btn btn-warning " type="button " ng-click="cancel() ">Cancel</button>
+<div class="modal-footer" style="border-top: none;">
 </div>
