@@ -1,8 +1,7 @@
-
 body.modal-open { 
   padding-right: 0 !important;
   overflow-y: scroll;
-  /*border: 0px;*/
+  border: 0px;
 }
 
 .modal-xss{
@@ -154,8 +153,6 @@ div.posts-editor:focus {
 
 div.posts-editor {
     padding: 10px;
-    /*box-shadow: 0 0 0 1px #ccc;*/
-    /*border-radius: 2px;*/
     font-size: 16px;
     font-family: Moncaco;
     min-height: 80px;
