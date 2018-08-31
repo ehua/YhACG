@@ -126,6 +126,28 @@ app.controller('LoginModalCtrl', function($scope, $uibModalInstance, items) {
     $scope.cancel = function() {
         $uibModalInstance.dismiss('cancel');
     };
+
+
+    $scope.efocus = function(){
+        var email = document.querySelector("#login-email");
+        email.style.border = "1px solid #027fff";
+    }
+    $scope.pfocus = function(){
+        var pwd = document.querySelector("#login-pwd");
+        pwd.style.border = "1px solid #027fff";
+    }
+
+    $scope.eblur = function(){
+        var email = document.querySelector("#login-email");
+        email.style.border = "1px solid #ccc";
+    }
+    $scope.pblur = function(){
+        var pwd = document.querySelector("#login-pwd");
+        pwd.style.border = "1px solid #ccc";
+    }
+
+
+
 });
 
 app.controller('RegisterModalCtrl', function($scope, $uibModalInstance, items, $http) {
@@ -166,6 +188,34 @@ app.controller('RegisterModalCtrl', function($scope, $uibModalInstance, items, $
                 $scope.sendNum();
             }, 1000)
         }
+    }
+
+    $scope.efocus = function(){
+        var email = document.querySelector("#register-email");
+        email.style.border = "1px solid #027fff";
+    }
+    $scope.pfocus = function(){
+        var password = document.querySelector("#register-password");
+        password.style.border = "1px solid #027fff";
+    }
+
+    $scope.cfocus = function(){
+        var code = document.querySelector("#register-code")
+        code.style.border = "1px solid #027fff";
+    }
+
+    $scope.eblur = function(){
+        var email = document.querySelector("#register-email");
+        email.style.border = "1px solid #ccc";
+    }
+    $scope.pblur = function(){
+        var password = document.querySelector("#register-password");
+        password.style.border = "1px solid #ccc";
+    }
+
+    $scope.cblur = function(){
+        var code = document.querySelector("#register-code")
+        code.style.border = "1px solid #ccc";
     }
 
 

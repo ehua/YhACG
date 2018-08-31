@@ -4,8 +4,8 @@
 </div>
 <div class="modal-body">
     <div class="login-content">
-        <input id="login-email" type="text" ng-model="email" placeholder="请输入邮箱" style="text-align: center;" class="custom-input form-control">
-        <input id="login-pwd" type="password" ng-model="pwd" placeholder="请输入密码(不少于6位)" style="text-align: center;" class="custom-input form-control">
+        <input id="login-email" type="text" ng-model="email" ng-focus="efocus()" ng-blur="eblur()" placeholder="请输入邮箱" style="text-align: center;" class="custom-input form-control">
+        <input id="login-pwd" type="password" ng-model="pwd" ng-focus="pfocus()" ng-blur="pblur()" placeholder="请输入密码(不少于6位)" style="text-align: center;" class="custom-input form-control">
     </div>
     <div class="login-submit">
     	<button type="button" class="btn btn-default" ng-click="login()" style="border-radius: 2px; width: 100%; height: 34px; background-color: #027fff;border: none; color: white;">登录</button>

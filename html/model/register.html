@@ -4,9 +4,9 @@
 </div>
 <div class="modal-body">
     <div class="register-content">
-        <input id="register-email" type="text" ng-model="email" placeholder="请输入邮箱" style="text-align: center;" class="custom-input form-control">
-        <input id="register-password" type="password" ng-model="password" placeholder="请输入密码(不少于6位)" style="text-align: center;" class="custom-input form-control">
-        <input id="register-code" type="text" ng-model="checkCode" disabled="disabled" placeholder="校验码" style="width: 50%;float: left;text-align: center;" class="custom-input form-control">
+        <input id="register-email" type="text" ng-focus="efocus()" ng-blur="eblur()" ng-model="email" placeholder="请输入邮箱" style="text-align: center;" class="custom-input form-control">
+        <input id="register-password" type="password" ng-focus="pfocus()" ng-blur="pblur()" ng-model="password" placeholder="请输入密码(不少于6位)" style="text-align: center;" class="custom-input form-control">
+        <input id="register-code" type="text" ng-model="checkCode" ng-focus="cfocus()" ng-blur="cblur()" disabled="disabled" placeholder="校验码" style="width: 50%;float: left;text-align: center;" class="custom-input form-control">
         <button type="button" class="btn btn-default send-code" ng-click="sendCode(email,this)" style="border-radius: 2px;font-size: 10px; margin-left: 15%; width: 35%; line-height: 20px;">获取校验码</button>
     </div>
     <div class="register-submit">
