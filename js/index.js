@@ -1,5 +1,11 @@
-var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'ngAnimate', 'quiet.directive']);
-app.controller('indexCtrl', function($scope, $http, $uibModal, $log) {
+var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'ngAnimate', 'ngCookies', 'quiet.directive']);
+app.controller('indexCtrl', function($scope, $http, $uibModal, $log, $cookies) {
+
+    $scope.status = false;
+    if ($cookies.get("user")) {
+        $scope.user = angular.fromJson($cookies.get("user")) ;
+        $scope.status = true;
+    }
 
     $scope.quiet = {
         images: [],
@@ -22,12 +28,12 @@ app.controller('indexCtrl', function($scope, $http, $uibModal, $log) {
 
     }, false);
 
-    $scope.edblur = function(){
+    $scope.edblur = function() {
         var code = document.querySelector(".editor")
         code.style.boxShadow = "0 0 0 1px #ccc";
     }
 
-    $scope.edfocus = function(){
+    $scope.edfocus = function() {
         var code = document.querySelector(".editor")
         code.style.boxShadow = "0 0 0 1px #027fff";
     }
@@ -104,9 +110,17 @@ app.controller('indexCtrl', function($scope, $http, $uibModal, $log) {
             // $log.info('Modal dismissed at: ' + new Date());
         }).catch(console.error);
     }
+
+    $scope.logout = function(){
+        $cookies.remove("user");
+        $http.post('/tanyp/u/logout');
+        location.reload();
+
+    }
+
 });
 
-app.controller('LoginModalCtrl', function($scope, $uibModalInstance, items) {
+app.controller('LoginModalCtrl', function($scope, $uibModalInstance, items, $http, $cookies) {
 
 
     $scope.login = function() {
@@ -118,7 +132,23 @@ app.controller('LoginModalCtrl', function($scope, $uibModalInstance, items) {
             } else {
                 if ($scope.pwd) {
                     if ($scope.pwd.length >= 6) {
-                        $uibModalInstance.close();
+                        var user = {
+                            "email": $scope.email,
+                            "pwd": $scope.pwd
+                        }
+                        $http.post('/tanyp/u/login', user).then(function(res) {
+                            res = res.data;
+                            if (res.ret) {
+                                var user = angular.toJson(res.data);
+                                console.log(res.data);
+                                var die = new Date();
+                                // die.setDate(die.getDate() + 1);
+                                die.setMinutes(die.getMinutes () + 10);
+                                $cookies.put("user", user,{'expires': die});
+                                $uibModalInstance.close();
+                                location.reload();
+                            }
+                        });
                     } else {
                         var pwd = document.getElementById('login-pwd');
                         pwd.style.border = "1px solid red";
@@ -139,20 +169,20 @@ app.controller('LoginModalCtrl', function($scope, $uibModalInstance, items) {
     };
 
 
-    $scope.efocus = function(){
+    $scope.efocus = function() {
         var email = document.querySelector("#login-email");
         email.style.border = "1px solid #027fff";
     }
-    $scope.pfocus = function(){
+    $scope.pfocus = function() {
         var pwd = document.querySelector("#login-pwd");
         pwd.style.border = "1px solid #027fff";
     }
 
-    $scope.eblur = function(){
+    $scope.eblur = function() {
         var email = document.querySelector("#login-email");
         email.style.border = "1px solid #ccc";
     }
-    $scope.pblur = function(){
+    $scope.pblur = function() {
         var pwd = document.querySelector("#login-pwd");
         pwd.style.border = "1px solid #ccc";
     }
@@ -170,7 +200,6 @@ app.controller('RegisterModalCtrl', function($scope, $uibModalInstance, items, $
             if (!reg.test(email)) {
                 e.style.border = "1px solid red";
             } else {
-                e.style.border = "1px solid #027fff";
                 $http.post('/tanyp/send/mail?email=' + email).then(function(res) {
                     res = res.data;
                     if (res.ret) {
@@ -201,30 +230,30 @@ app.controller('RegisterModalCtrl', function($scope, $uibModalInstance, items, $
         }
     }
 
-    $scope.efocus = function(){
+    $scope.efocus = function() {
         var email = document.querySelector("#register-email");
         email.style.border = "1px solid #027fff";
     }
-    $scope.pfocus = function(){
+    $scope.pfocus = function() {
         var password = document.querySelector("#register-password");
         password.style.border = "1px solid #027fff";
     }
 
-    $scope.cfocus = function(){
+    $scope.cfocus = function() {
         var code = document.querySelector("#register-code")
         code.style.border = "1px solid #027fff";
     }
 
-    $scope.eblur = function(){
+    $scope.eblur = function() {
         var email = document.querySelector("#register-email");
         email.style.border = "1px solid #ccc";
     }
-    $scope.pblur = function(){
+    $scope.pblur = function() {
         var password = document.querySelector("#register-password");
         password.style.border = "1px solid #ccc";
     }
 
-    $scope.cblur = function(){
+    $scope.cblur = function() {
         var code = document.querySelector("#register-code")
         code.style.border = "1px solid #ccc";
     }
@@ -233,7 +262,7 @@ app.controller('RegisterModalCtrl', function($scope, $uibModalInstance, items, $
     $scope.register = function() {
 
         if ($scope.email) {
-            if ($scope.password && $scope.password.length >=6) {
+            if ($scope.password && $scope.password.length >= 6) {
                 if ($scope.checkCode) {
                     var user = {
                         "email": $scope.email,
@@ -246,7 +275,7 @@ app.controller('RegisterModalCtrl', function($scope, $uibModalInstance, items, $
                             countdown = 0;
                             $uibModalInstance.close();
                         } else {
-
+                            $scope.prompt = res.msg;
                         }
                     });
                 } else {

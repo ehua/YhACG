@@ -12,6 +12,7 @@
     <link rel="icon" href="img/favicon.png">
     <title>YhACG</title>
     <script type="text/javascript" src="lib/angularjs/1.7.0/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angularjs/1.7.0/angular-cookies.min.js"></script>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="lib/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" type="text/css" href="http://p192rb6nz.bkt.clouddn.com/bootstrap.min.css"> -->
@@ -560,16 +561,16 @@
                                 <div class="spe" style="margin: 1%;"></div>
                                 <span class="profile">是一个关于分享和探索的地方</span>
                             </div>
-                            <div ng-show="{{!user}}" class="panel-body text-center">
+                            <div ng-show="{{!status}}" class="panel-body text-center">
                                 <button type="button" style="color: white;background-color: #027fff;border: 0px;" ng-click="register()" class="btn btn-default btn-sm">现在注册</button>
                                 <div class="spe" style="margin: 7%;"></div>
                                 <span>已注册用户请 <a href="" style="box-shadow: none; outline: none;" ng-click="login()">登录</a></span>
                             </div>
-                            <div ng-show="{{user}}" class="panel-body text-center">
+                            <div ng-show="{{status}}" class="panel-body text-center">
                                 <a title="退出" href="" ng-click="logout()">
                                     <i class="iconfont logout">&#xe633;</i>
                                 </a>
-                                <img src='img/head.png' style='width: 90px;height: 90px; margin-right:5px;' ' alt='... '' class='img-circle'>
+                                <img ng-src='{{user.headPortrait}}' style='width: 90px;height: 90px; margin-right:5px;' ' alt='... '' class='img-circle'>
                             </div>
 
                         </div>
