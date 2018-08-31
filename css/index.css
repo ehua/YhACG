@@ -148,8 +148,9 @@ div.posts-editor:focus {
 }
 
 div.posts-editor {
+    letter-spacing:1px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 14px;
     font-family: Moncaco;
     min-height: 80px;
 }
