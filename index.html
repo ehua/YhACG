@@ -50,7 +50,7 @@
                         <div class="panel panel-default" style="border: 0px;">
                             <div class="panel-body">
                                 <div class="editor">
-                                    <div class="posts-editor" contenteditable placeholder="说点什么吧..." ng-model="quiet.posts"></div> 
+                                    <div class="posts-editor" ng-blur="edblur()" ng-focus="edfocus()" contenteditable placeholder="说点什么吧..." ng-model="quiet.posts"></div> 
                                     <div id="holder">
                                         <div ng-repeat="file in quiet.files" ng-cloak class="image ng-cloak">
                                             <div class="whole">

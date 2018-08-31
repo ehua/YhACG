@@ -170,11 +170,11 @@ div.image img {
 }
 
 
-div.editor:hover {
+/*div.editor:hover {
     border: none;
     box-shadow: 0 0 0 1px #027fff;
 }
-
+*/
 .delete {
     float: right;
     color: #fff;

@@ -22,6 +22,17 @@ app.controller('indexCtrl', function($scope, $http, $uibModal, $log) {
 
     }, false);
 
+    $scope.edblur = function(){
+        var code = document.querySelector(".editor")
+        code.style.boxShadow = "0 0 0 1px #ccc";
+    }
+
+    $scope.edfocus = function(){
+        var code = document.querySelector(".editor")
+        code.style.boxShadow = "0 0 0 1px #027fff";
+    }
+
+
     $scope.upload = function() {
         $("#fileChooser").click();
     }
