@@ -21,6 +21,13 @@ div.login-content{
     line-height: 20px;
 }
 
+div.panel-posts{
+    border:none; 
+    margin-bottom: 0px;
+    border-radius: 0px;
+    /*box-shadow: none;*/
+}
+
 .custom-input{
     font-size: 15px;
     box-shadow: none;
