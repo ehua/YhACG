@@ -51,11 +51,11 @@
                         <div class="panel panel-default" style="border: 0px;">
                             <div class="panel-body">
                                 <div class="editor">
-                                    <div class="posts-editor" ng-blur="edblur()" ng-focus="edfocus()" contenteditable placeholder="说点什么吧..." ng-model="quiet.posts"></div> 
+                                    <div class="posts-editor" ng-blur="edblur()" ng-change="edchange()" ng-focus="edfocus()" contenteditable placeholder="说点什么吧..." ng-model="quiet.posts"></div> 
                                     <div id="holder">
                                         <div ng-repeat="file in quiet.files" ng-cloak class="image ng-cloak">
                                             <div class="whole">
-                                                <a title="删除" href="" ng-click="quiet.files.splice($index,1)">
+                                                <a title="删除" href="" ng-click="quiet.files.splice($index,1);edchange();">
                                                     <i class="iconfont delete">&#xe633;</i>
                                                 </a>
                                             </div>
@@ -68,7 +68,7 @@
                                 <div class="left-comment" style="width: 85.5%;float: left;color: #027fff">
                                     <ul>
                                         <li style="margin-left: 0px;"><a href=""><i class="iconfont">&#xe61e;</i>表情</a></li>
-                                        <p hidden="hidden"><input type="file" ng-model="quiet.wx" name="fileChooser" multiple="multiple" accept="image/*" id="fileChooser"></p>
+                                        <p hidden="hidden"><input type="file" name="fileChooser" multiple="multiple" accept="image/*" id="fileChooser"></p>
                                         <li><a href="" ng-click="upload()"><i class="iconfont">&#xe631;</i>图片</a></li>
                                         <li><a href=""><i class="iconfont">&#xe603;</i>链接</a></li>
                                         <li><a href=""><i class="iconfont">#</i>话题</a></li>
@@ -80,7 +80,7 @@
                                             <!-- Ctrl or ⌘ + Enter -->
                                         </li>
                                         <li>
-                                            <button type="submit" class="btn btn-default release-btn" style="width:74px;border:0px;color: white;background-color: #027fff" ng-click="release()">发布</button>
+                                            <button type="submit" class="btn btn-default release-btn" disabled="disabled" style="width:74px;border:0px;color: white;background-color: #027fff" ng-click="release()">发布</button>
                                         </li>
                                     </ul>
                                 </div>

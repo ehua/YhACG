@@ -24,8 +24,7 @@ app.controller('indexCtrl', function($scope, $http, $uibModal, $log, $cookies) {
         fileInput.setAttribute("type", "text");
         $scope.$apply();
         fileInput.setAttribute("type", "file");
-        console.log($scope.quiet.files);
-
+        $scope.edchange();
     }, false);
 
     $scope.edblur = function() {
@@ -36,6 +35,15 @@ app.controller('indexCtrl', function($scope, $http, $uibModal, $log, $cookies) {
     $scope.edfocus = function() {
         var code = document.querySelector(".editor")
         code.style.boxShadow = "0 0 0 1px #027fff";
+    }
+
+    $scope.edchange = function(){
+        var btn = document.querySelector(".release-btn");
+        if (($scope.quiet.posts && $scope.quiet.posts.length > 0) ||  $scope.quiet.files.length > 0) {
+            btn.removeAttribute("disabled");
+        }else{
+            btn.setAttribute("disabled", "disabled");
+        }
     }
 
 
