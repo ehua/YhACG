@@ -52,6 +52,7 @@ app.controller('indexCtrl', function($scope, $http, $uibModal, $log, $cookies) {
     }
 
     $scope.release = function(e) {
+        console.log($scope.quiet);
         // var files = $scope.quiet.files;
         // var f = new window.FormData();
         // for (var i = 0; i < files.length; i++) {
